@@ -51,6 +51,8 @@
 # License: MIT
 #
 
+VERSION = '1.0.0'
+
 import os
 import re
 import sys
@@ -556,6 +558,9 @@ class DrawingSheet:
 if __name__ == '__main__':
 
     argparser = argparse.ArgumentParser()
+
+    argparser.add_argument("-V", "--version", action="version",
+            version="%(prog)s " + VERSION)
 
     argparser.add_argument("-c", "--config",
             help="Configuration ini file",
